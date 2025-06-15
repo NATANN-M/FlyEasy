@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:padding="16dp"
+    tools:context=".ui.fragments.ProfileFragment">
+
+   ->
+    <TextView
+        android:id="@+id/tvProfileTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="24dp"
+        android:text="FlyEasy"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+
+        android:letterSpacing="0.02"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- Modern Card Container with elevation and rounded corners -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:strokeColor="#10000000"
+        app:strokeWidth="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvProfileTitle">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:background="@color/white">
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Edit Profile"
+               android:textColor="@color/black"
+               android:textSize="25sp"
+               android:textStyle="bold"
+               android:paddingBottom="16dp"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusTopStart="8dp"
+                app:boxCornerRadiusTopEnd="8dp"
+                app:boxCornerRadiusBottomStart="8dp"
+                app:boxCornerRadiusBottomEnd="8dp"
+                app:boxStrokeColor="@color/primary_dark"
+                app:hintTextColor="@color/primary_dark">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtFullName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Full Name"
+                    android:inputType="textPersonName"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusTopStart="8dp"
+                app:boxCornerRadiusTopEnd="8dp"
+                app:boxCornerRadiusBottomStart="8dp"
+                app:boxCornerRadiusBottomEnd="8dp"
+                app:boxStrokeColor="@color/primary_dark"
+                app:hintTextColor="@color/primary_dark">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusTopStart="8dp"
+                app:boxCornerRadiusTopEnd="8dp"
+                app:boxCornerRadiusBottomStart="8dp"
+                app:boxCornerRadiusBottomEnd="8dp"
+                app:boxStrokeColor="@color/primary_dark"
+                app:hintTextColor="@color/primary_dark">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Phone"
+                    android:inputType="phone"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Modern Button with better styling -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Update Profile"
+                android:textSize="16sp"
+                android:textColor="@android:color/white"
+                android:letterSpacing="0.02"
+                app:cornerRadius="8dp"
+                app:backgroundTint="@color/dark_gray"
+                style="@style/Widget.MaterialComponents.Button"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

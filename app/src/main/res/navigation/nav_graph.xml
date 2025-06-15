@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <!-- Home Fragment -->
+<fragment
+android:id="@+id/homeFragment"
+android:name="com.example.flyeasy.ui.fragments.HomeFragment"
+android:label="Home"
+tools:layout="@layout/fragment_home" />
+
+    <!-- Search / Flight List Fragment -->
+<fragment
+android:id="@+id/searchFragment"
+android:name="com.example.flyeasy.ui.fragments.FlightListFragment"
+android:label="Search"
+tools:layout="@layout/fragment_flight_list">
+
+<action
+    android:id="@+id/action_searchFragment_to_bookingFragment"
+    app:destination="@id/bookingFragment" />
+</fragment>
+
+    <!-- Booking Fragment -->
+<fragment
+android:id="@+id/bookingFragment"
+android:name="com.example.flyeasy.ui.fragments.BookingFragment"
+android:label="Booking"
+tools:layout="@layout/fragment_booking" />
+
+    <!-- My Bookings Fragment -->
+<fragment
+android:id="@+id/myBookingsFragment"
+android:name="com.example.flyeasy.ui.fragments.MyBookingsFragment"
+android:label="My Bookings"
+tools:layout="@layout/fragment_my_bookings">
+
+<action
+    android:id="@+id/action_myBookingsFragment_to_ticketFragment"
+    app:destination="@id/ticketFragment" />
+</fragment>
+
+    <!-- Ticket Fragment -->
+<fragment
+android:id="@+id/ticketFragment"
+android:name="com.example.flyeasy.ui.fragments.TicketFragment"
+android:label="Ticket"
+tools:layout="@layout/fragment_ticket" />
+
+    <!-- Profile Fragment -->
+<fragment
+android:id="@+id/profileFragment"
+android:name="com.example.flyeasy.ui.fragments.ProfileFragment"
+android:label="Profile"
+tools:layout="@layout/fragment_profile"> <!-- Assuming layout file exists -->
+
+<!-- Action to navigate from ProfileFragment to LoginRegisterFragment -->
+<action
+    android:id="@+id/action_profileFragment_to_loginRegisterFragment"
+    app:destination="@id/loginRegisterFragment" />
+
+<!-- Action to navigate from ProfileFragment to EditProfileFragment -->
+<action
+    android:id="@+id/action_profileFragment_to_editProfileFragment"
+    app:destination="@id/editProfileFragment" />
+</fragment>
+
+    <!-- Login/Register Fragment Definition (MUST BE ADDED) -->
+<fragment
+android:id="@+id/loginRegisterFragment"
+android:name="com.example.flyeasy.ui.fragments.LoginRegisterFragment"
+android:label="Login or Register"
+tools:layout="@layout/fragment_login_register" /> <!-- Assuming layout file exists -->
+
+    <!-- Edit Profile Fragment Definition (MUST BE ADDED) -->
+<fragment
+android:id="@+id/editProfileFragment"
+android:name="com.example.flyeasy.ui.fragments.EditProfileFragment"
+android:label="Edit Profile"
+tools:layout="@layout/fragment_edit_profile" /> <!-- Assuming layout file exists -->
+
+    <fragment
+        android:id="@+id/savedFlightsFragment"
+    android:name="com.example.flyeasy.ui.fragments.SavedFlightsFragment"
+    android:label="Saved Flights"
+    tools:layout="@layout/fragment_saved_flights" />
+
+    <fragment
+        android:id="@+id/SavedTicketsFragment"
+    android:name="com.example.flyeasy.ui.fragments.SavedTicketsFragment"
+    android:label="Saved Tickets"
+    tools:layout="@layout/fragment_saved_tickets" />
+
+
+    <fragment
+        android:id="@+id/supportFragment"
+        android:name="com.example.flyeasy.ui.fragments.SupportFragment"
+        android:label="Support"/>
+
+    <!--Admin Navigation-->
+
+
+    <fragment
+        android:id="@+id/adminDashboardFragment"
+        android:name="com.example.flyeasy.ui.fragments.adminDashboardFragment"
+        android:label="Dashboard">
+    <action
+        android:id="@+id/action_adminDashboardFragment_to_manageUsersFragment"
+        app:destination="@id/manageUsersFragment" />
+        <action
+            android:id="@+id/action_adminDashboardFragment_to_sendNotificationFragment"
+            app:destination="@id/sendNotificationFragment" />
+
+
+   </fragment>
+
+    <fragment
+        android:id="@+id/manageFlightsFragment"
+        android:name="com.example.flyeasy.ui.fragments.manageFlightsFragment"
+        android:label="Flights" />
+
+    <fragment
+        android:id="@+id/manageUsersFragment"
+        android:name="com.example.flyeasy.ui.fragments.manageUsersFragment"
+        android:label="Manage Users"
+        tools:layout="@layout/fragment_manage_users"/>
+
+
+    <fragment
+        android:id="@+id/adminProfileFragment"
+        android:name="com.example.flyeasy.ui.fragments.adminProfileFragment"
+        android:label="Profile" />
+
+<fragment
+    android:id="@+id/adminSupportFragment"
+    android:name="com.example.flyeasy.ui.fragments.AdminSupportFragment"
+    android:label="Support"
+     />
+
+    <fragment
+        android:id="@+id/sendNotificationFragment"
+        android:name="com.example.flyeasy.ui.fragments.SendNotificationFragment"
+        android:label="Send Notification" />
+
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.example.flyeasy.ui.fragments.NotificationFragment"
+        android:label="Notifications" />
+
+</navigation>

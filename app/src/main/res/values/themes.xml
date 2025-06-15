@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.FlyEasy" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Disable night mode -->
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+
+        <!-- Always use light mode -->
+        <item name="android:colorBackground">#FFFFFF</item>
+        <item name="android:textColorPrimary">#000000</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary</item>
+        <item name="colorSecondary">@color/colorSecondary</item>
+
+    </style>
+
+    <style name="Theme.FlyEasy" parent="Base.Theme.FlyEasy"/>
+</resources>

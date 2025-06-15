@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/nav_saved_flights"
+        android:title="Saved Flights"
+        android:icon="@drawable/ic_favorite" />
+    <item android:id="@+id/nav_my_tickets"
+        android:title="My Tickets"
+        android:icon="@drawable/ic_ticket" />
+    <item android:id="@+id/nav_notifications"
+        android:title="Notifications"
+        android:icon="@drawable/ic_notification" />
+    <item android:id="@+id/nav_support"
+        android:title="Support"
+        android:icon="@drawable/ic_support" />
+    <item android:id="@+id/nav_logout"
+        android:title="Logout"
+        android:icon="@drawable/ic_logout" />
+</menu>

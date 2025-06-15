@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@android:color/white"
+    android:paddingBottom="56dp">
+
+    <LinearLayout
+        android:id="@+id/flight_list_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search Flights"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#1A1A1A"
+            android:letterSpacing="0.03"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Origin and Destination Side by Side -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp"
+            android:weightSum="2"
+            android:gravity="center">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/originContainer"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                app:startIconDrawable="@drawable/ic_plane"
+            app:startIconTint="#0B0909"
+            app:hintTextColor="#0B0A0A"
+            app:boxStrokeColor="#0D0C0C"
+
+            app:errorTextColor="@android:color/holo_red_dark">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editOrigin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Origin"
+                android:textColor="#1A1A1A"
+                android:textColorHint="@color/black"
+                android:inputType="textCapWords"
+                android:singleLine="true"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+
+        android:layout_marginHorizontal="4dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/destinationContainer"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+
+        app:hintTextColor="#121111"
+        app:boxStrokeColor="#0D0C0C"
+
+        app:errorTextColor="@android:color/holo_red_dark">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editDestination"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Destination"
+            android:textColor="#1A1A1A"
+            android:textColorHint="@color/black"
+            android:inputType="textCapWords"
+            android:singleLine="true"/>
+    </com.google.android.material.textfield.TextInputLayout>
+</LinearLayout>
+
+    <!-- Travel Date -->
+<com.google.android.material.textfield.TextInputLayout
+android:id="@+id/dateContainer"
+style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginBottom="24dp"
+app:startIconDrawable="@drawable/ic_calander"
+    app:startIconTint="#050404"
+    app:hintTextColor="#0D0A0A"
+    app:boxStrokeColor="#0D0B0B"
+
+    app:errorTextColor="@android:color/holo_red_dark">
+
+<com.google.android.material.textfield.TextInputEditText
+android:id="@+id/editDate"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:hint="Travel Date"
+android:textColor="#1A1A1A"
+android:inputType="none"
+    android:textColorHint="@color/black"
+android:focusable="false"
+android:clickable="true"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Search Button -->
+<com.google.android.material.button.MaterialButton
+android:id="@+id/btnSearch"
+android:layout_width="match_parent"
+android:layout_height="56dp"
+android:layout_marginBottom="24dp"
+android:text="Search Flights"
+android:textAllCaps="false"
+android:textColor="@android:color/white"
+android:textSize="16sp"
+android:textStyle="bold"
+app:icon="@drawable/ic_search"
+    app:iconGravity="start"
+    app:iconPadding="8dp"
+    app:iconTint="@android:color/white"
+    app:cornerRadius="12dp"
+    app:backgroundTint="#10B981"
+    app:rippleColor="#0D8E6E"
+    app:elevation="2dp"/>
+
+    <!-- Loading Spinner -->
+<com.google.android.material.progressindicator.CircularProgressIndicator
+android:id="@+id/progressBar"
+android:layout_width="48dp"
+android:layout_height="48dp"
+android:layout_gravity="center_horizontal"
+android:layout_marginVertical="16dp"
+android:indeterminate="true"
+android:visibility="gone"
+app:indicatorColor="#10B981"
+app:trackColor="#E0F2F1"
+app:indeterminateAnimationType="contiguous"/>
+
+    <!-- Flight List -->
+<androidx.recyclerview.widget.RecyclerView
+android:id="@+id/recyclerFlights"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginTop="8dp"
+android:clipToPadding="false"
+android:paddingBottom="24dp"
+android:overScrollMode="never"/>
+
+    <!-- Empty State View (Optional) -->
+<TextView
+android:id="@+id/emptyStateView"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="No flights found. Try different search criteria."
+android:textColor="#090909"
+android:textSize="16sp"
+android:gravity="center"
+android:padding="24dp"
+android:visibility="gone"/>
+
+    </LinearLayout>
+    </ScrollView>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="300dp"
+    android:layout_height="160dp"
+    android:layout_marginEnd="12dp"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="12dp"
+    app:cardBackgroundColor="@android:color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Image with gradient overlay -->
+        <ImageView
+            android:id="@+id/imgDeal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:contentDescription="Deal Image" />
+
+        <!-- Gradient overlay at bottom -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            />
+
+        <!-- Deal title with better styling -->
+        <TextView
+            android:id="@+id/tvDealTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="16dp"
+            android:text="Big Discount to Dubai!"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:shadowColor="#80000000"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="2"
+            android:letterSpacing="0.03"/>
+
+        <!-- Optional: Price/Offer tag -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/tvDealTitle"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="#E53935"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="4dp"
+            android:text="50% OFF"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.02"
+            app:fontFamily="sans-serif-medium"/>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

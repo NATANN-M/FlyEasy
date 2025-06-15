@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="12dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="#22000000"
+    android:backgroundTint="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@android:color/white">
+
+        <!-- User ID -->
+        <TextView
+            android:id="@+id/textUserId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User ID: #123"
+            android:textColor="#222222"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+
+        <!-- Message -->
+        <TextView
+            android:id="@+id/textMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="User's message goes here."
+            android:textSize="14sp"
+            android:paddingTop="6dp"
+            android:textColor="#444444" />
+
+        <!-- Reply -->
+        <TextView
+            android:id="@+id/textReply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reply from admin goes here."
+            android:textStyle="italic"
+            android:textColor="#0F9D58"
+            android:paddingTop="6dp"
+            android:textSize="14sp" />
+
+        <!-- Timestamp -->
+        <TextView
+            android:id="@+id/textTimestamp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sent: 2025-06-09 12:00 PM"
+            android:textColor="#999999"
+            android:textSize="12sp"
+            android:paddingTop="8dp"
+            android:gravity="end" />
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

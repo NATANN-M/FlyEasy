@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="6dp"
+    app:cardBackgroundColor="@color/colorOnPrimary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Flight image -->
+        <ImageView
+            android:id="@+id/imageAirplane"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="Flight Image"
+            android:background="@color/light_gray"
+            app:layout_constraintDimensionRatio="16:9" />
+
+        <!-- Airline name -->
+        <TextView
+            android:id="@+id/textAirline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Airline Name"
+            android:textColor="@color/primary_color"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- Route -->
+        <TextView
+            android:id="@+id/textRoute"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="From - To"
+            android:textColor="@color/dark_gray"
+            android:textSize="16sp" />
+
+        <!-- Departure and Arrival -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/textDeparture"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Dep: 10:00 AM"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textArrival"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Arr: 12:00 PM"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- Price and Book button section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            android:gravity="end|center_vertical">
+
+            <!-- Price -->
+            <TextView
+                android:id="@+id/textPrice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="$120"
+                android:textColor="@color/primary_color"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- Book Now Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBookNow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Book Now"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                app:backgroundTint="@color/primary_color"
+                app:cornerRadius="12dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/primary_dark" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/authContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA"
+    android:padding="24dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <!-- App Title -->
+            <TextView
+                android:id="@+id/textFlyEasy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="FlyEasy"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:textColor="#1A1A1A"
+                android:gravity="center"
+                android:letterSpacing="0.03"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginBottom="32dp"/>
+
+            <!-- Profile Image Container -->
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
+
+                <ImageView
+                    android:id="@+id/imgProfile"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/lc_profile"
+                    android:contentDescription="Profile Image"
+                    android:background="@drawable/circle_background"
+                    android:elevation="4dp"/>
+
+                <!-- Change Image Button -->
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/btnChangeImage"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginEnd="-8dp"
+                    android:layout_marginBottom="-8dp"
+
+                    app:backgroundTint="#009688"
+                    app:tint="@android:color/white"
+                    app:elevation="4dp"/>
+            </FrameLayout>
+
+            <!-- User Details -->
+            <TextView
+                android:id="@+id/txtUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Full Name"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#1A1A1A"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:id="@+id/txtUserEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:textSize="16sp"
+                android:textColor="#666666"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:id="@+id/txtUserPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phone"
+                android:textSize="16sp"
+                android:textColor="#666666"
+                android:layout_marginBottom="32dp"/>
+
+            <!-- Action Buttons -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnEditProfile"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="Edit Profile"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+
+                app:backgroundTint="#1A1A1A"
+                app:rippleColor="#333333"
+                android:layout_marginBottom="8dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLogout"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="Logout"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+
+                app:backgroundTint="#F44336"
+                app:rippleColor="#D32F2F"
+                android:layout_marginBottom="24dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLoginRegister"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="Login or Register"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+
+                app:backgroundTint="#009688"
+                app:rippleColor="#009688"
+                android:visibility="gone"
+                android:layout_marginBottom="8dp"/>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

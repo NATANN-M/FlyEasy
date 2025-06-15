@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:padding="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <!-- Page Title -->
+        <TextView
+            android:id="@+id/tvBookingTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Booking Details"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#1A1A1A"
+            android:gravity="center"
+            android:letterSpacing="0.03"
+            android:fontFamily="sans-serif-medium"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Flight Info Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardFlightInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
+            app:strokeColor="#F1F1F1"
+            app:strokeWidth="1dp"
+            app:layout_constraintTop_toBottomOf="@id/tvBookingTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/textFlightOrigin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="#1A1A1A"
+                    android:fontFamily="sans-serif-medium"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_plane"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textFlightOrigin"
+                app:layout_constraintBottom_toTopOf="@id/textFlightDestination"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:id="@+id/textFlightDestination"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="#1A1A1A"
+                    android:fontFamily="sans-serif-medium"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textFlightOrigin"
+                    android:layout_marginTop="36dp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F1F1F1"
+                    app:layout_constraintTop_toBottomOf="@id/textFlightDestination"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="16dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@id/textFlightDestination"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <TextView
+                        android:id="@+id/textAirline"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="14sp"
+                        android:textColor="#121111" />
+
+                    <TextView
+                        android:id="@+id/textDeparture"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="14sp"
+                        android:textColor="#121111"
+                        android:gravity="end"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textColor="#10B981"
+                    android:fontFamily="sans-serif-medium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Passenger Info Section Title -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Passenger Information"
+            android:textSize="16sp"
+            android:textColor="#1A1A1A"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginBottom="12dp"
+            app:layout_constraintTop_toBottomOf="@id/cardFlightInfo"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <!-- Passenger Info Form -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/nameInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Full Name"
+            android:layout_marginBottom="12dp"
+            app:boxStrokeColor="#0D0C0C"
+            app:hintTextColor="#161313"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardFlightInfo"
+            android:layout_marginTop="32dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:textColor="#1A1A1A"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/emailInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email Address"
+            android:layout_marginBottom="12dp"
+            app:boxStrokeColor="#0F0D0D"
+            app:hintTextColor="#0F0C0C"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nameInputLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:textColor="#1A1A1A"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/phoneInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Phone Number"
+            android:layout_marginBottom="12dp"
+            app:boxStrokeColor="#100E0E"
+            app:hintTextColor="#121111"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/emailInputLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:textColor="#1A1A1A"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passportInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Passport Number"
+            android:layout_marginBottom="24dp"
+            app:boxStrokeColor="#0F0D0D"
+            app:hintTextColor="#181515"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/phoneInputLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editpassportNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapCharacters"
+                android:textColor="#1A1A1A"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnConfirmBooking"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Confirm Booking"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+
+            app:backgroundTint="#10B981"
+            app:layout_constraintTop_toBottomOf="@id/passportInputLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="24dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

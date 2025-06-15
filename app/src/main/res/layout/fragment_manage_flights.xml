@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tvManageFlights"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Manage Flights"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/primary_dark"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Top Buttons Row -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp">
+
+        <Button
+            android:id="@+id/btn_fetch_api_flights"
+            android:text="Load API Flights"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/black"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/btn_view_local_flights"
+            android:text="Local Flights"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/black"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <!-- Add New Flight Button -->
+    <Button
+        android:id="@+id/btn_add_flight"
+        android:text="Add New Flight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/holo_green_dark"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Recycler View for Flights -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_flights"
+        android:layout_width="390dp"
+        android:layout_height="455dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:padding="4dp"
+        android:scrollbars="vertical"
+        android:layout_marginBottom="35dp"/>
+
+</LinearLayout>

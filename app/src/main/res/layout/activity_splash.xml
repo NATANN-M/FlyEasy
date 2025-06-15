@@ -1,0 +1,35 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/splash_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <ImageView
+        android:id="@+id/cloud"
+        android:layout_width="435dp"
+        android:layout_height="137dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="-201dp"
+        android:layout_marginTop="170dp"
+        android:src="@drawable/ic_cloud" />
+
+    <ImageView
+        android:id="@+id/plane"
+        android:layout_width="160dp"
+        android:layout_height="151dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="-55dp"
+        android:layout_marginTop="457dp"
+        android:src="@drawable/ic_planes" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="160dp"
+        android:layout_height="150dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_flyeasy_logo"
+        android:visibility="invisible" />
+</RelativeLayout>

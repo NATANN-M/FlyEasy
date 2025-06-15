@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="FlyEasy My Booking"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:padding="12dp"
+        android:background="@color/colorOnPrimary"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <!-- Card with 3D effect -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="6dp"
+        app:cardCornerRadius="8dp"
+        app:strokeColor="#40000000"
+        app:strokeWidth="1dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/titleText"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@color/white">
+
+            <!-- Passenger Details -->
+            <TextView
+                android:id="@+id/textViewName"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Passenger: Name Placeholder"
+                android:textColor="#2D3748"/>
+
+            <TextView
+                android:id="@+id/textViewEmail"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Email: "
+                android:textColor="#020202"/>
+
+            <!-- Booking Date -->
+            <TextView
+                android:id="@+id/textViewBookingDate"
+                style="@style/TextAppearance.MaterialComponents.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Booked on: YYYY-MM-DD"
+                android:textColor="#000000"/>
+
+            <!-- Flight Details Section Header -->
+            <TextView
+                style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Flight Details"
+                android:textStyle="bold"
+                android:textColor="@color/colorSecondary"/>
+
+            <TextView
+                android:id="@+id/textViewFlightId"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Flight ID: XYZ123"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:id="@+id/textViewFlightOrigin"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="From: Origin Airport"
+                android:textColor="#050505"/>
+
+            <TextView
+                android:id="@+id/textViewFlightDestination"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="To: Destination Airport"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:id="@+id/textViewFlightAirline"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Airline: Airline Name"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:id="@+id/textViewFlightDepartureTime"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Departs: HH:MM AM/PM"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:id="@+id/textViewFlightPrice"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Price Paid: $0.00"
+                android:textColor="#10B981"
+                android:textStyle="bold"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonViewTicket"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="View Ticket"
+                app:icon="@drawable/ic_ticket"
+                app:iconPadding="4dp"
+                app:strokeColor="?attr/colorPrimary"
+                app:strokeWidth="1dp"
+                android:textColor="@color/colorPrimary"/>
+
+            <Button
+                android:id="@+id/btnSaveFlight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save Flight"
+                android:background="@color/black"/>
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

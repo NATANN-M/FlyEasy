@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:text="Flight Details"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium"
+            android:letterSpacing="0.02"/>
+
+        <!-- Airline -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:hintEnabled="true"
+
+            app:boxCornerRadiusTopStart="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusBottomEnd="8dp"
+           >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_airline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Airline"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/darker_gray"
+                android:inputType="textCapWords"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Origin & Destination Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <!-- Origin -->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                app:hintEnabled="true"
+               >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_origin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Origin"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:inputType="textCapWords"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Destination -->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                app:hintEnabled="true"
+               >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_destination"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Destination"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:inputType="textCapWords"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <!-- Departure & Arrival Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <!-- Departure -->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                app:hintEnabled="true"
+               >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_departure"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Departure"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:inputType="datetime"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Arrival -->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                app:hintEnabled="true"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_arrival"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Arrival"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:inputType="datetime"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <!-- Price & Seats Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <!-- Price -->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                app:hintEnabled="true"
+
+                app:prefixText="$">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Price"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:inputType="numberDecimal"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Seats Available -->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                app:hintEnabled="true"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_seats"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Seats"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:inputType="number"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <!-- Image URL -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:hintEnabled="true"
+            app:startIconDrawable="@drawable/ic_plane">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_image_url"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Image URL (optional)"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/darker_gray"
+                android:inputType="textUri"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Submit Button -->
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Save Flight"
+            android:textColor="@color/colorOnPrimary"
+            android:textSize="16sp"
+            android:background="@color/black"
+            app:cornerRadius="8dp"
+            style="@style/Widget.Material3.Button"/>
+
+    </LinearLayout>
+</ScrollView>
